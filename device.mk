@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2022 PixelPlusUI
+# Copyright (C) 2022 CherishOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #

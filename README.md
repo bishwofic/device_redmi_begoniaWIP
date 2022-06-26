@@ -19,3 +19,4 @@ It was released in September 2019.
 
 
 **Copyright (C) 2022 PixelPlusUI**
+**Copyright (C) 2022 CherishOS**

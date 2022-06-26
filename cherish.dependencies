@@ -1,0 +1,30 @@
+[
+  {
+    "repository" : "kernel_xiaomi_mt6785",
+    "target_path": "kernel/xiaomi/mt6785"
+  },
+  {
+    "repository" : "vendor_redmi_begonia",
+    "target_path": "vendor/redmi/begonia"
+  },
+  {
+    "repository" : "device_mediatek_sepolicy",
+    "target_path": "device/mediatek/sepolicy"
+  },
+  {
+    "repository" : "vendor_redmi_begonia-ims",
+    "target_path": "vendor/redmi/begonia-ims"
+  },
+  {
+    "repository" : "vendor_v4afx",
+    "target_path": "vendor/v4afx"
+  },
+  {
+    "repository" : "vendor_dirac",
+    "target_path": "vendor/dirac"
+  },
+  {
+    "repository" : "vendor_redmi_begonia-firmware",
+    "target_path": "vendor/redmi/begonia-firmware"
+  }
+]

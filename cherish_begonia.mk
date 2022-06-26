@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2022 PixelPlusUI
+#Copyright (C) 2022 CherishOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -16,15 +17,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit from begonia device
 $(call inherit-product, device/redmi/begonia/device.mk)
 
-# Inherit some common PixelPlusUI stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common CherishOS stuff
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit some extras stuff
 $(call inherit-product-if-exists, vendor/extras/extras.mk)
-$(call inherit-product, vendor/gcambsg/config.mk)
 $(call inherit-product, vendor/v4afx/config.mk)
 $(call inherit-product, vendor/dirac/config.mk)
-$(call inherit-product, vendor/ANXCamera/config.mk)
 
 # Fix uses broken libraries
 RELAX_USES_LIBRARY_CHECK := true
@@ -36,24 +35,26 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
-TARGET_BOOTANIMATION_HALF_RES := true
 
-# PixelPlusUI Flags
-CUSTOM_BUILD_TYPE := OFFICIAL
-PPUI_MAINTAINER := 7Soldier
+# CherishOS Official
+CHERISH_BUILD_TYPE := OFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=Bishwo
+
+# CherishOS Flags
 IS_PHONE := true
+WITH_GMS := true
+TARGET_USES_BLUR := true
+USE_PIXEL_CHARGING := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP  := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
-PRODUCT_NAME := aosp_begonia
+PRODUCT_NAME := cherish_begonia
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 8 Pro
 PRODUCT_MANUFACTURER := Xiaomi
