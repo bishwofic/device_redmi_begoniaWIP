@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     libldacBT_dec \
     libbtconfigstore
 
+# GrapheneOS Camera
+PRODUCT_PACKAGES += \
+    GrapheneOSCamera
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.3.vendor \
